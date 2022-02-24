@@ -1,0 +1,30 @@
+@mixin hoverCityColor ($inputColor) {
+    color: $inputColor;
+}
+
+// background: $deepBlue;
+
+// ul {
+//     width: 100%;
+// }
+
+// a {
+//     color: $offWhite;
+//     &:hover {
+//         background: lighten($deepBlue, 10);
+//       }
+// }
+
+@mixin toolbarColor($toolbarName) {
+    @if $toolbarName == "movie" {
+        background: $deepBlue;
+    }
+
+    @if $toolbarName == "weather" {
+        background: $darkSalmon;
+    }
+
+    @if $toolbarName == "index" {
+        background:black;
+    }
+}

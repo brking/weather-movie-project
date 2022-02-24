@@ -1,0 +1,5 @@
+heroku login
+git add
+git commit -am ""
+git push heroku main
+heroku open

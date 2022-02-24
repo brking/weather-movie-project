@@ -1,0 +1,110 @@
+@import "variables";
+@import "mixins";
+
+.navbar{
+    margin-bottom:0;
+    a{
+      color: set-text-color($main-color) !important;
+    }
+  
+    .fa{
+      font-size:18px;
+    }
+  }
+
+.icon {
+    position: relative;
+    top: -50px;
+    border-radius: 50%;
+    width: 100px;
+    margin-bottom: -50px;
+}
+
+//nav-bar-menu-items
+#navbarSupportedContentIndex {
+    @include toolbarColor('index');
+
+    ul {
+        width: 100%;
+    }
+
+    a {
+        color: $offWhite;
+        &:hover {
+            background: lighten($deepBlue, 10);
+          }
+    }
+}
+//end of nav-bar-menu-items
+
+//nav-bar-menu-items
+#navbarSupportedContentMovie {
+    @include toolbarColor('movie');
+
+    ul {
+        width: 100%;
+    }
+
+    a {
+        color: $offWhite;
+        &:hover {
+            background: lighten($deepBlue, 10);
+          }
+    }
+}
+//end of nav-bar-menu-items
+
+//nav-bar-menu-items
+#navbarSupportedContentWeather {
+    @include toolbarColor('weather');
+
+    ul {
+        width: 100%;
+    }
+
+    a {
+        color: $offWhite;
+        &:hover {
+            background: lighten($deepBlue, 10);
+          }
+    }
+}
+//end of nav-bar-menu-items
+
+body {
+    background-color: aliceblue;
+    background-image: url('../img/background.jpg');
+}
+
+.navbar {
+    form {
+        padding: 10px 20px
+    }
+}
+
+//Navbar Brand
+.navbar-brand {
+    float: left;
+    padding: $navbar-padding-vertical $navbar-padding-horizontal;
+    font-size: $font-size-large;
+    line-height: $line-height-computed;
+    height: $navbar-height;
+  
+    @media (min-width: $grid-float-breakpoint) {
+      .navbar > .container &,
+      .navbar > .container-fluid & {
+        margin-left: -$navbar-padding-horizontal;
+      }
+    }
+  }
+//End of Navbar Brand
+
+.city-item {
+    a {
+        text-decoration: none;
+        &:hover {
+            background: $deepBlue;
+            @include hoverCityColor($offWhite);
+        }
+    }
+}
